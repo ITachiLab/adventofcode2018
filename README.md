@@ -8,3 +8,5 @@ To make this even more fun, every code will be written in a different language. 
 **[NASM Linux]** 1 - Chronal Calibration
 
 **[Python]** 2 - Inventory Management System
+
+**[C]** 3 - No Matter How You Slice It
