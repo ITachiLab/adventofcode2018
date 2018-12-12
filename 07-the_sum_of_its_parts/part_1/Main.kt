@@ -3,18 +3,12 @@ package pl.itachi
 import java.io.File
 
 class Node(val name: Char) : Comparable<Node> {
-    private val children: MutableList<Node> = mutableListOf()
-    private val parents: MutableList<Node> = mutableListOf()
-
-    var visited: Boolean = false
+    val children: MutableList<Node> = mutableListOf()
+    val parents: MutableList<Node> = mutableListOf()
 
     fun addChildren(childNode: Node) {
         childNode.parents.add(this)
         children.add(childNode)
-    }
-
-    fun canBeDone(): Boolean {
-        return parents.all { it.visited }
     }
 
     override fun compareTo(other: Node): Int {
@@ -34,12 +28,30 @@ fun main(args: Array<String>) {
             val product: Char? = find.groups[2]?.value?.get(0)
 
             if (requirement != null && product != null) {
-                nodes.getOrElse()
-                val reqNode = Node(requirement)
-                val prodNode = Node(product)
+                val reqNode = nodes.getOrElse(requirement) {Node(requirement)}.also { nodes[requirement] = it }
+                val prodNode = nodes.getOrElse(product) {Node(product)}.also { nodes[product] = it }
 
                 reqNode.addChildren(prodNode)
             }
         }
+    }
+
+    val nodeQueue: MutableList<Node> = mutableListOf()
+
+    nodeQueue.addAll(nodes.values.filter { it.parents.isEmpty() }.sorted())
+
+    while (nodeQueue.isNotEmpty()) {
+        val node = nodeQueue.first().also { nodeQueue.remove(it) }
+        print(node.name)
+
+        node.children
+            .sorted()
+            .forEach {
+                it.parents.remove(node)
+
+                if (it.parents.isEmpty()) {
+                    nodeQueue.add(it).also { nodeQueue.sort() }
+                }
+            }
     }
 }
