@@ -15,4 +15,4 @@ To make this even more fun, every code will be written in a different language. 
 | Chronal Coordinates | Java | Anything can be done with Java. |
 | The Sum of Its Parts | Kotlin | I really like this guy. |
 | Memory Maneuver | Kotlin | Oh man, I really like Kotlin |
-| Marble Mania | Kotlin | Don't judge me... |
+| Marble Mania | Kotlin | Don't judge me... Part 2 was computed on Amazon AWS Batch.  |
