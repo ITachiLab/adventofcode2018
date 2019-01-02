@@ -16,3 +16,6 @@ To make this even more fun, every code will be written in a different language. 
 | The Sum of Its Parts | Kotlin | I really like this guy. |
 | Memory Maneuver | Kotlin | Oh man, I really like Kotlin |
 | Marble Mania | Kotlin | Don't judge me... Part 2 was computed on Amazon AWS Batch.  |
+| The Stars Align | Kotlin | Quite interesting problem. |
+| Chronal Charge | Kotlin | Much counting, wow, quite hard. |
+| Subterranean Sustainability | Kotlin | Part 2 is sneaky. If it takes longer than 2 seconds to get the result, you are doing it wrong. |
