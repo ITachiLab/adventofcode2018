@@ -47,7 +47,7 @@ class Cart(var x: Int, var y: Int, initialDirection: Char) : Comparable<Cart> {
         }
     }
 
-    fun move(): Cart? {
+    fun move(): Pair<Cart, Cart>? {
         when (direction) {
             0 -> y--
             1 -> x++
@@ -73,7 +73,7 @@ class Cart(var x: Int, var y: Int, initialDirection: Char) : Comparable<Cart> {
 
         carts.forEach {
             if (it != this && x == it.x && y == it.y) {
-                return this
+                return Pair(it, this)
             }
         }
 
@@ -97,16 +97,15 @@ fun main(args: Array<String>) {
         rowNumber++
     }
 
-    var crashCart: Cart? = null
-
-    while (crashCart == null) {
+    while (carts.size != 1) {
         carts.sorted().forEach { cart ->
             cart.move()?.let {
-                crashCart = it
-                return@forEach
+                carts.removeAll(it.toList())
             }
         }
     }
 
-    println("Crash at: ${crashCart?.x},${crashCart?.y}")
+    val lastCart = carts.first()
+
+    println("Last cart: ${lastCart.x},${lastCart.y}")
 }
