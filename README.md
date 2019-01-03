@@ -5,7 +5,7 @@ To make this even more fun, every code will be written in a different language. 
 
 ## Quests done ##
 
-| Quest | Language | Notes |
+| Quest | Language | Comment |
 |-----------------------------|------------|------------------------------------------------------------------------------------------|
 | Chronal Calibration | NASM Linux | Works only on Linux, because I've used interrupts for reading and writing. No libraries. |
 | Inventory Management System | Python | Easy peasy with Python. |
@@ -19,3 +19,5 @@ To make this even more fun, every code will be written in a different language. 
 | The Stars Align | Kotlin | Quite interesting problem. |
 | Chronal Charge | Kotlin | Much counting, wow, quite hard. |
 | Subterranean Sustainability | Kotlin | Part 2 is sneaky. If it takes longer than 2 seconds to get the result, you are doing it wrong. |
+| Mine Cart Madness | Kotlin | One of the most interesting problems so far. |
+| Chocolate Charts | C | Back to the roots, C again. |
