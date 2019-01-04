@@ -21,3 +21,5 @@ To make this even more fun, every code will be written in a different language. 
 | Subterranean Sustainability | Kotlin | Part 2 is sneaky. If it takes longer than 2 seconds to get the result, you are doing it wrong. |
 | Mine Cart Madness | Kotlin | One of the most interesting problems so far. |
 | Chocolate Charts | C | Back to the roots, C again. |
+| Beverage Bandits | - | Skipped for now, I'm too lazy. |
+| Chronal Classification | C | I really liked this one. |
