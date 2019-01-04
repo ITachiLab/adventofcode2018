@@ -138,16 +138,6 @@ int main() {
         }
     }
 
-    for (int i = 0; i < 16; i++) {
-        printf("%p\n", valid_opcodes[i]);
-    }
-
-    printf("\n");
-
-    for (int i = 0; i < 16; i++) {
-        printf("%p\n", opcodes[i]);
-    }
-
     reg[0] = reg[1] = reg[2] = reg[3] = 0;
 
     while (!feof(file) && fgets(buffer, 24, file) != NULL) {
